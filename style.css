@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+:root {
+    --main-blue: #00d4ff;
+    --red-nav: #f84545;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -8,14 +13,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 header {
     font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     background: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #1c2541;
+    position: sticky;
+    top: 0;
 }
 
 nav {
@@ -35,18 +43,55 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #00d4ff;
+    color: var(--main-blue);
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-shadow: 0 0 8px #00d4ff;
+    text-shadow: 0 0 8px var(--main-blue);
+}
+
+.page-select {
+    color: var(--red-nav);
+    font-weight: bold;
+}
+
+.page-select:hover {
+    text-shadow: 0 0 8px var(--red-nav);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgb(0, 0, 0, 0.8);
+    border-top: 1px solid #1c2541;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px var(--main-blue);
+}
+
+
+/* Main page */
+.content {
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .sec-1 {
     text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, rgba(13,27,42,0.9), rgba(0,212,255,0.5));
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(13,27,42,0.9), rgba(0, 213, 255, 0.76));
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
@@ -62,23 +107,16 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-footer {
+.sec-2 {
+    width: 60%;
     text-align: center;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    border-top: 1px solid #1c2541;
-    font-size: 0.9rem;
-    color: #ffffff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 2rem 0rem;
 }
 
-footer a {
-    color: #00d4ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-shadow: 0 0 8px #00d4ff;
+.sec-2 p {
+    text-align: justify;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
