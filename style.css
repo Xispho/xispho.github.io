@@ -2,6 +2,7 @@
 
 :root {
     --main-blue: #00d4ff;
+    --dark-blue: #18324e;
     --red-nav: #f84545;
 }
 
@@ -9,7 +10,7 @@ body {
     margin: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #ffffff;
-    background: radial-gradient(circle at 50% 50%, #0d1b2a, #000);
+    background: radial-gradient(circle at 50%, var(--dark-blue), #000000);
     overflow-x: hidden;
 }
 
@@ -21,7 +22,7 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid #1c2541;
+    border-bottom: 1px solid var(--dark-blue);
     position: sticky;
     top: 0;
 }
@@ -60,13 +61,54 @@ nav ul li a:hover {
     text-shadow: 0 0 8px var(--red-nav);
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px;
+    transition: 0.4s;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--dark-blue);
+        border-top: 1px solid var(--main-blue);
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 1rem 0;
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
     background: rgb(0, 0, 0, 0.8);
-    border-top: 1px solid #1c2541;
+    border-top: 1px solid var(--dark-blue);
     font-size: 0.9rem;
     color: #ffffff;
 }
@@ -91,7 +133,7 @@ footer a:hover {
 .sec-1 {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(13,27,42,0.9), rgba(0, 213, 255, 0.76));
+    background: linear-gradient(135deg, var(--dark-blue), rgba(0, 213, 255, 0.76));
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
@@ -108,7 +150,8 @@ footer a:hover {
 }
 
 .sec-2 {
-    width: 60%;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     padding: 2rem 0rem;
 }
