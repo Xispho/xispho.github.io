@@ -12,6 +12,7 @@ body {
     color: #ffffff;
     background: radial-gradient(circle at 50%, var(--dark-blue), #000000);
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Header */
@@ -25,6 +26,7 @@ header {
     border-bottom: 1px solid var(--dark-blue);
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav {
@@ -61,47 +63,6 @@ nav ul li a:hover {
     text-shadow: 0 0 8px var(--red-nav);
 }
 
-/* Hamburger menu */
-.hamburger {
-    display: none;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background: #ffffff;
-    margin: 3px;
-    transition: 0.4s;
-}
-
-/* Media queries */
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: var(--dark-blue);
-        border-top: 1px solid var(--main-blue);
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        margin: 1rem 0;
-    }
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -128,6 +89,7 @@ footer a:hover {
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    z-index: 1;
 }
 
 .sec-1 {
@@ -176,4 +138,53 @@ footer a:hover {
     margin-right: 5vw;
     font-size: 1.2rem;
     text-align: justify;
+}
+
+
+.masonry-grid {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    column-count: 3; /* Nombre de colonnes */
+    column-gap: 1rem;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.masonry-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.masonry-item img {
+    border-radius: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.masonry-item:hover .overlay {
+    opacity: 1;
 }
