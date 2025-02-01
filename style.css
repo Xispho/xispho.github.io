@@ -107,7 +107,7 @@ footer {
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
-    background: rgb(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     border-top: 1px solid var(--dark-blue);
     font-size: 0.9rem;
     color: #ffffff;
@@ -123,43 +123,57 @@ footer a:hover {
 }
 
 
-/* Main page */
+/* Main content */
 .content {
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
 .sec-1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.presentation {
+    margin-top: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--dark-blue), rgba(0, 213, 255, 0.76));
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    background-color:var(--dark-blue);
+    border-radius: 4rem;
+    box-shadow: 0 0 30px var(--dark-blue);
 }
 
-.sec-1 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.presentation:hover {
+    box-shadow: 0 0 30px var(--main-blue);
+    cursor: pointer;
 }
 
-.sec-1 p {
-    font-size: 1.2rem;
-    max-width: 600px;
+.presentation img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
     margin: 0 auto;
-    line-height: 1.6;
+    box-shadow: 0 0 30px var(--main-blue);
 }
 
 .sec-2 {
     display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 2rem 0rem;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
-.sec-2 p {
-    text-align: justify;
+.about-me {
+    width: 50%;
+}
+
+.about-me p {
+    margin-left: 5vw;
+    margin-right: 5vw;
     font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+    text-align: justify;
 }
