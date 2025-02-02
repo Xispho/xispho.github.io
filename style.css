@@ -188,3 +188,51 @@ footer a:hover {
 .masonry-item:hover .overlay {
     opacity: 1;
 }
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.skill-box {
+    position: relative; /* Set position to relative for absolute positioning of child */
+    background-color: var(--dark-blue);
+    box-shadow: 0 0 30px var(--dark-blue);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    min-height: 200px;
+    width: calc(33.33% - 20px); /* Adjust width for three columns */
+    text-align: center;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.skill-box:hover {
+    background-color: var(--main-blue);
+    box-shadow: 0 0 10px var(--main-blue);
+}
+
+.projects-list {
+    position: absolute; /* Position absolutely within the skill box */
+    top: 100%; /* Position below the skill box */
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--red-nav);
+    max-height: 0; /* Start with max-height of 0 */
+    opacity: 0; /* Start with opacity of 0 */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Transition for max-height and opacity */
+    border-radius: 5px; /* Optional: rounded corners for the project list */
+}
+
+.skill-box:hover .projects-list {
+    max-height: 100px; /* Set a max-height for the expanded state */
+    opacity: 1; /* Fade in */
+}
