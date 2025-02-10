@@ -140,6 +140,11 @@ footer a:hover {
     text-align: justify;
 }
 
+embed {
+    margin-right: 5rem;
+    border-radius: 2rem;
+}
+
 
 /* Projects */
 .masonry-grid {
