@@ -320,9 +320,17 @@ button:hover {
     background-color: #000000;
 }
 
+.languages {
+    display: flex;
+}
 
 .languages img {
     padding: 0.5rem;
+    margin: 0.2rem;
     background-color: var(--dark-blue);
     width: 50px;
+}
+
+.new-background-color img {
+    background-color: #2a5481;
 }
