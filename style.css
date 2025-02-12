@@ -65,6 +65,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-top: 1rem;
     padding: 1rem;
@@ -74,6 +76,13 @@ footer {
     color: #ffffff;
 }
 
+footer img {
+    margin-right: 20px;
+    width: 35px;
+    box-shadow: 0 0 30px var(--main-blue);
+    border-radius: 50%;
+}
+
 footer a {
     color: #00d4ff;
     text-decoration: none;
@@ -81,6 +90,10 @@ footer a {
 
 footer a:hover {
     text-shadow: 0 0 8px var(--main-blue);
+}
+
+.footer-text {
+    margin-top: 10px;
 }
 
 
@@ -302,6 +315,7 @@ embed {
 .contact-container form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .contact-container label {
@@ -345,22 +359,7 @@ embed {
 .contact-container textarea::placeholder {
     color: #cccccc;
 }
-/*
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
-button:hover {
-    background-color: #218838;
-}
-*/
 .highlight {
     border: 1px solid #f84545;
     background-color: #000000;
